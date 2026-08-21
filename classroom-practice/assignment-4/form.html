@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Submission</title>
+</head>
+<body>
+    <!-- The form submits its result to the iframe below. -->
+    <h1>Submit Your Name</h1>
+    <form action="result.html" method="get" target="result-frame">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <iframe src="result.html" name="result-frame" title="Form submission result" width="400" height="120"></iframe>
+</body>
+</html>

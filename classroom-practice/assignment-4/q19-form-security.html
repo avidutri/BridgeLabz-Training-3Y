@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Security Attributes</title>
+</head>
+<body>
+    <!-- autocomplete="off" asks the browser not to remember entered values. -->
+    <h1>Secure Information Form</h1>
+    <form action="#" method="post" autocomplete="off">
+        <p><label for="username">Username:</label> <input type="text" id="username" name="username" required></p>
+        <p><label for="email">Email:</label> <input type="email" id="email" name="email" required></p>
+        <p><label for="access-code">Access Code:</label> <input type="password" id="access-code" name="access-code" required></p>
+        <button type="submit">Continue</button>
+    </form>
+    <p>Turning off autocomplete can improve security on shared computers by reducing the chance that sensitive form values are saved or suggested.</p>
+</body>
+</html>
