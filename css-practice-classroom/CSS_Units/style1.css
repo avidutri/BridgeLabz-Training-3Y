@@ -1,0 +1,42 @@
+html{
+    font-size: 16px;
+}
+
+
+
+.container a{
+    font-size: 2rem;
+   
+   color: rgb(7, 3, 27);
+    text-decoration:none;
+    cursor: pointer;
+  border-top: 1px solid black;
+    
+    display:block;
+    
+
+
+}
+
+.container a:hover{
+    color: blue;
+    background-color: rgb(161, 221, 93);
+}
+
+.container ul{
+
+    list-style-type: none;
+    border: 1px solid black;
+    padding: 10px 10px;
+    background-color: bisque;
+      border-radius: 10px;
+}
+
+.container ul li{
+   
+    
+    text-align: center;
+   
+   
+
+}
