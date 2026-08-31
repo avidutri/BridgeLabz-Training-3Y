@@ -1,0 +1,331 @@
+/* 
+   Q9 - Magazine/Newspaper Column Layout
+   CSS Demonstrating:
+   - CSS columns (column-count, column-gap, column-rule)
+   - column-span: all for heading across columns
+   - Float for image alignment
+   - Justified text
+   - Responsive column adjustment
+   - Background and padding styling
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f5f0;
+    color: #333;
+}
+
+.magazine-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== HEADER ===== */
+.magazine-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid #d4af37;
+}
+
+.magazine-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.magazine-header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* ===== MAGAZINE CONTENT ===== */
+.magazine-content {
+    padding: 3rem 2rem;
+    background-color: white;
+}
+
+/* ===== FEATURE HEADLINE (spans all columns) ===== */
+.feature-headline {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* ===== FEATURED FIGURE ===== */
+.featured-figure {
+    float: left;
+    width: 280px;
+    margin: 0 1.5rem 1rem 0;
+    text-align: center;
+}
+
+.featured-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+}
+
+.featured-figure figcaption {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* ===== ARTICLE TEXT (Multi-column) ===== */
+.article-text {
+    /* 
+        Column Layout Properties:
+        - column-count: Creates 3 vertical columns
+        - column-gap: Space between columns
+        - column-rule: Visual divider between columns
+    */
+    column-count: 3;
+    column-gap: 2rem;
+    column-rule: 2px solid #ecf0f1;
+    
+    /* Text justification for newspaper-like appearance */
+    text-align: justify;
+    
+    /* Prevent orphans and widows for better readability */
+    orphans: 2;
+    widows: 2;
+}
+
+.article-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    
+    /* Prevent column break inside paragraph */
+    break-inside: avoid;
+}
+
+.article-text p:first-letter {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* ===== FOOTER ===== */
+.magazine-footer {
+    background-color: #f5f5f0;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 2rem;
+    border-top: 2px solid #ecf0f1;
+    font-size: 0.9rem;
+}
+
+.magazine-footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.magazine-footer a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large screens - 3 columns */
+@media (max-width: 1200px) {
+    .magazine-container {
+        max-width: 100%;
+    }
+
+    .article-text {
+        column-count: 3;
+        column-gap: 1.5rem;
+    }
+}
+
+/* Medium screens - 2 columns */
+@media (max-width: 900px) {
+    .magazine-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .magazine-header {
+        padding: 2rem 1.5rem;
+    }
+
+    .magazine-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .feature-headline {
+        font-size: 1.8rem;
+    }
+
+    .article-text {
+        column-count: 2;
+        column-gap: 1.5rem;
+        column-rule: 1px solid #ecf0f1;
+    }
+
+    .featured-figure {
+        width: 240px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .magazine-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .magazine-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .magazine-header p {
+        font-size: 1rem;
+    }
+
+    .magazine-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .feature-headline {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .article-text {
+        column-count: 2;
+        column-gap: 1rem;
+        text-align: left;
+    }
+
+    .featured-figure {
+        width: 100%;
+        float: none;
+        margin: 0 0 1rem 0;
+    }
+
+    .article-text p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile phones - 1 column */
+@media (max-width: 480px) {
+    .magazine-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .magazine-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .magazine-header p {
+        font-size: 0.95rem;
+    }
+
+    .magazine-content {
+        padding: 1rem;
+    }
+
+    .feature-headline {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Single column layout for mobile */
+    .article-text {
+        column-count: 1;
+        column-gap: 0;
+        column-rule: none;
+        text-align: left;
+    }
+
+    .featured-figure {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .featured-figure figcaption {
+        font-size: 0.8rem;
+    }
+
+    .article-text p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .magazine-footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    .magazine-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .magazine-header p {
+        font-size: 0.85rem;
+    }
+
+    .feature-headline {
+        font-size: 1.1rem;
+    }
+
+    .article-text p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .magazine-container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+
+    .magazine-header {
+        page-break-after: avoid;
+    }
+
+    .article-text {
+        column-count: 2;
+    }
+
+    .featured-figure {
+        page-break-inside: avoid;
+    }
+
+    .magazine-footer {
+        display: none;
+    }
+}

@@ -1,0 +1,258 @@
+/* 
+   Q3 - Team Members Cards
+   CSS Demonstrating:
+   - Flexbox for 3-column layout
+   - Box Model (padding, margin, border)
+   - Rounded corners and shadow effects
+   - Hover effects and transitions
+   - Responsive design (single column < 600px)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* ===== HEADER ===== */
+.team-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.team-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.team-header p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* ===== TEAM SECTION LAYOUT ===== */
+.team-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== CARD STYLES ===== */
+.team-card {
+    /* Box Model Properties */
+    background-color: white;
+    border-radius: 12px;
+    padding: 0;
+    margin: 0;
+    width: 280px;
+    
+    /* Shadow and border effects */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ecf0f1;
+    
+    /* Transitions for smooth hover effect */
+    transition: all 0.3s ease;
+    
+    /* Flexbox for content alignment */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    /* Overflow handling */
+    overflow: hidden;
+}
+
+/* Hover Effect - enlarge and change background */
+.team-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== CARD IMAGE ===== */
+.card-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-color: #ecf0f1;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+/* ===== CARD CONTENT ===== */
+.card-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.member-role {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #3498db;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.member-description {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* ===== TEAM LEAD SPECIAL STYLING ===== */
+.team-lead {
+    border: 3px solid #f39c12;
+    background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+}
+
+.team-lead .member-role {
+    color: #f39c12;
+}
+
+.team-lead .card-image {
+    position: relative;
+}
+
+.team-lead .card-image::after {
+    content: 'Team Lead';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f39c12;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets and smaller screens */
+@media (max-width: 900px) {
+    .team-section {
+        gap: 1.5rem;
+    }
+
+    .team-card {
+        width: 260px;
+    }
+}
+
+/* Mobile devices - Single column < 600px */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    .team-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .team-header p {
+        font-size: 1rem;
+    }
+
+    .team-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .member-name {
+        font-size: 1.15rem;
+    }
+
+    .member-description {
+        font-size: 0.85rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .team-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+
+    .card-content {
+        padding: 1rem;
+    }
+
+    .member-name {
+        font-size: 1rem;
+    }
+
+    .member-role {
+        font-size: 0.8rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .team-card {
+        page-break-inside: avoid;
+    }
+}

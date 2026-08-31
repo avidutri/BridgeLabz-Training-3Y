@@ -1,0 +1,332 @@
+/* 
+   Q7 - Contact Form Page
+   CSS Demonstrating:
+   - Semantic form styling
+   - Input focus states
+   - Centered layout using flexbox
+   - Consistent color scheme
+   - Responsive design
+   - Border-radius, padding, and shadows
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+    text-align: center;
+    color: white;
+    padding: 3rem 2rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* ===== FORM SECTION ===== */
+.form-section {
+    display: flex;
+    gap: 3rem;
+    max-width: 1000px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* ===== FORM CONTAINER ===== */
+.form-container {
+    flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.form-container h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+}
+
+/* ===== FORM STYLING ===== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* ===== LABELS ===== */
+.form-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ===== INPUT AND TEXTAREA ===== */
+.form-input,
+.form-textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease;
+    
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Focus state - change border color and remove shadow */
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.submit-button {
+    padding: 0.75rem 2rem;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(52, 152, 219, 0.4);
+    background: linear-gradient(135deg, #2980b9 0%, #2471a3 100%);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.2);
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info {
+    flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    height: fit-content;
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.info-block {
+    margin-bottom: 1.5rem;
+}
+
+.info-block h3 {
+    font-size: 1rem;
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.info-block p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.info-block a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-block a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* ===== PAGE FOOTER ===== */
+.page-footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+    .form-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .form-container,
+    .contact-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+    }
+
+    .form-container,
+    .contact-info {
+        padding: 1.5rem;
+    }
+
+    .form-container h2,
+    .contact-info h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-wrapper {
+        min-height: auto;
+    }
+
+    .page-header {
+        padding: 2rem 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 0.95rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+        align-items: stretch;
+    }
+
+    .form-section {
+        flex-direction: column;
+    }
+
+    .form-container,
+    .contact-info {
+        padding: 1.5rem 1rem;
+        border-radius: 8px;
+    }
+
+    .form-container h2,
+    .contact-info h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-group {
+        gap: 0.35rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .submit-button {
+        padding: 0.65rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .page-header {
+        background: white;
+        color: black;
+    }
+
+    .form-container,
+    .contact-info {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

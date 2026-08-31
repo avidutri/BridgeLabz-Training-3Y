@@ -1,0 +1,252 @@
+/* 
+   Q6 - CSS Photo Gallery
+   CSS Demonstrating:
+   - Flexbox layout for multi-column grid
+   - Hover effects (scale transform)
+   - Caption overlay with position: absolute and opacity
+   - Box shadow and border radius
+   - Responsive design adjusting columns
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.gallery-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.gallery-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-header p {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+/* ===== GALLERY GRID ===== */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* ===== GALLERY ITEM ===== */
+.gallery-item {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    
+    /* Cursor pointer for hover indication */
+    cursor: pointer;
+    
+    /* Smooth transitions */
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    /* Scale up on hover */
+    transform: scale(1.1);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== GALLERY IMAGE ===== */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== CAPTION OVERLAY ===== */
+.caption-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    
+    /* Flexbox for centering caption */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Opacity transition for smooth fade effect */
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .caption-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+/* ===== CAPTION TEXT ===== */
+.caption-text {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    
+    /* Initially hidden with opacity */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .caption-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* 
+   Large screens: Display 4 columns
+   Screen width: > 1200px
+*/
+@media (max-width: 1200px) {
+    .gallery-item {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* 
+   Medium screens: Display 3 columns
+   Screen width: 768px - 1024px
+*/
+@media (max-width: 1024px) {
+    .gallery-grid {
+        gap: 1.2rem;
+    }
+
+    .gallery-item {
+        width: 240px;
+        height: 240px;
+    }
+
+    .caption-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-header h1 {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        gap: 1rem;
+    }
+
+    .gallery-item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .caption-text {
+        font-size: 1rem;
+    }
+}
+
+/* 
+   Small screens: Display 2 columns
+   Screen width: 480px - 768px
+*/
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .gallery-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-header p {
+        font-size: 0.9rem;
+    }
+
+    .gallery-grid {
+        gap: 0.8rem;
+        justify-content: space-between;
+    }
+
+    .gallery-item {
+        width: calc(50% - 0.4rem);
+        height: 150px;
+        border-radius: 8px;
+    }
+
+    .caption-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* 
+   Extra small screens: Display 1 column
+   Screen width: < 320px
+*/
+@media (max-width: 320px) {
+    .gallery-grid {
+        gap: 0.5rem;
+    }
+
+    .gallery-item {
+        width: 100%;
+        height: 120px;
+        border-radius: 5px;
+    }
+
+    .caption-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .gallery-item {
+        page-break-inside: avoid;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .caption-overlay {
+        display: none;
+    }
+}
