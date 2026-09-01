@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Combined Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo">
+                <h1>Brand</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <div class="main-grid">
+            <article class="article">
+                <h2 class="article-title">Welcome to Our Website</h2>
+                <p>
+                    This is a responsive webpage layout that combines Flexbox and CSS Grid. 
+                    The header uses Flexbox to align the logo and navigation horizontally, 
+                    while the main content area uses CSS Grid to create a two-column layout.
+                </p>
+
+                <div class="content-boxes">
+                    <div class="box">
+                        <h3>Box 1</h3>
+                        <p>This is the first box containing important information about our services and offerings.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Box 2</h3>
+                        <p>The second box provides additional details and features of our products and solutions.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Box 3</h3>
+                        <p>The third box showcases our expertise and experience in the industry.</p>
+                    </div>
+                </div>
+
+                <p>
+                    On mobile devices, all sections stack vertically for optimal viewing. 
+                    This ensures that the content is accessible and readable on all screen sizes.
+                </p>
+            </article>
+
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        <li><a href="#post1">Understanding Flexbox</a></li>
+                        <li><a href="#post2">CSS Grid Mastery</a></li>
+                        <li><a href="#post3">Responsive Design Tips</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#web">Web Design</a></li>
+                        <li><a href="#dev">Development</a></li>
+                        <li><a href="#seo">SEO</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#facebook">Facebook</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#instagram">Instagram</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Our Website. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

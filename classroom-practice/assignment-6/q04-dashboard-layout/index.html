@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout - CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>Dashboard</h1>
+            <div class="user-info">
+                <span>Welcome, Admin</span>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#analytics">Analytics</a></li>
+                    <li><a href="#users">Users</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                    <li><a href="#reports">Reports</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="box box-1">
+                <h3>Total Users</h3>
+                <p class="stat">5,432</p>
+                <p class="description">Active users this month</p>
+            </div>
+
+            <div class="box box-2">
+                <h3>Revenue</h3>
+                <p class="stat">$45,230</p>
+                <p class="description">Total revenue generated</p>
+            </div>
+
+            <div class="box box-3">
+                <h3>Orders</h3>
+                <p class="stat">1,205</p>
+                <p class="description">New orders received</p>
+            </div>
+
+            <div class="box box-4">
+                <h3>Growth Rate</h3>
+                <p class="stat">+23%</p>
+                <p class="description">Year over year growth</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
