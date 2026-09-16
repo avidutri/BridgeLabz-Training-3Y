@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Exploration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header><p class="eyebrow">Assignment 7 / Q8</p><h1>Inside the box</h1><p>Every layer changes the space an element occupies.</p></header>
+        <section class="model-layout" aria-label="Box model layers">
+            <div class="model-demo"><div class="margin-layer"><span class="layer-label margin-label">margin</span><div class="border-layer"><span class="layer-label border-label">border</span><div class="padding-layer"><span class="layer-label padding-label">padding</span><div class="content-layer">content</div></div></div></div></div>
+            <aside><h2>Layer guide</h2><p><b>Margin</b> creates outside space.</p><p><b>Border</b> frames the element.</p><p><b>Padding</b> creates inside space.</p><p><b>Content</b> holds the actual text.</p><div class="sizing-note"><b>box-sizing: border-box;</b><br>keeps padding and border inside the declared width.</div></aside>
+        </section>
+    </main>
+</body>
+</html>
