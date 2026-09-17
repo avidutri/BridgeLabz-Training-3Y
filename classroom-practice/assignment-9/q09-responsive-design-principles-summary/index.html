@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design Principles Summary</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <p class="eyebrow">Assignment 9 / Q9</p>
+      <h1>Responsive Design Principles</h1>
+    </header>
+
+    <main class="principles-grid">
+      <article class="principle-box">
+        <h2>Fluid Layouts</h2>
+        <p>Layouts use percentages and flexible units so content adapts smoothly.</p>
+        <code>.container { width: 90%; }</code>
+      </article>
+
+      <article class="principle-box">
+        <h2>Flexible Media</h2>
+        <p>Images and videos are scaled proportionally to fit varying screen sizes.</p>
+        <code>img { max-width: 100%; }</code>
+      </article>
+
+      <article class="principle-box">
+        <h2>Breakpoints</h2>
+        <p>Media queries apply different rules at key viewport widths.</p>
+        <code>@media (max-width: 600px) { ... }</code>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #111827;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar,
+.site-footer {
+  background: #0f172a;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-area {
+  flex: 1;
+  width: min(1000px, 90%);
+  margin: 2rem auto;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.feature-box {
+  flex: 1;
+  background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+  border-radius: 18px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.03);
+}
+
+.feature-box h2 {
+  margin-top: 0;
+}
+
+.site-footer {
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .main-area {
+    flex-direction: column;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
