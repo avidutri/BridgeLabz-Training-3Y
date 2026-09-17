@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini UI Layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="site-header">
+        <div class="brand">Creative Studio</div>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#">Home</a>
+          <a href="#">Projects</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+
+      <main class="main-card">
+        <section class="form-panel">
+          <p class="eyebrow">Project Setup</p>
+          <h1>Design Brief</h1>
+
+          <form class="profile-form">
+            <label>
+              <span>Name</span>
+              <input type="text" placeholder="Enter your name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" placeholder="Enter your email" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea rows="4" placeholder="Describe your idea"></textarea>
+            </label>
+
+            <div class="button-row">
+              <button type="submit" class="submit-btn">Submit</button>
+              <button type="button" class="secondary-btn">Preview</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="visual-panel" aria-label="Design preview">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Team discussion" />
+          <div class="mini-card">
+            <h2>Weekly Goals</h2>
+            <ul>
+              <li>UI refresh</li>
+              <li>Mobile first</li>
+              <li>Micro interactions</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="site-footer">
+        <p>Simple, responsive, and polished interface design.</p>
+      </footer>
+    </div>
+  </body>
+</html>

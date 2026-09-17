@@ -1,0 +1,100 @@
+/* Element selector: styles all paragraph tags */
+p {
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* Class selector: targets reusable elements with a shared class */
+.highlight {
+  background: #fef3c7;
+  padding: 0.5rem 0.8rem;
+  border-left: 4px solid #f59e0b;
+}
+
+/* ID selector: unique element styling */
+#special {
+  color: #7c2d12;
+  font-weight: 700;
+}
+
+/* Attribute selector: matches elements with a specific attribute */
+[data-role="note"] {
+  border: 1px solid #cbd5e1;
+  padding: 0.75rem;
+  background: #f8fafc;
+}
+
+/* Descendant combinator: all p inside .parent */
+.parent p {
+  color: #0f766e;
+}
+
+/* Child combinator: direct child only */
+.parent > p {
+  border-bottom: 2px solid #14b8a6;
+}
+
+/* Adjacent sibling combinator: immediate next sibling */
+h3 + p {
+  font-style: italic;
+}
+
+/* General sibling combinator: all following siblings */
+h3 ~ p {
+  background: #ecfeff;
+  padding: 0.35rem 0.6rem;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.site-header,
+.site-footer {
+  padding: 1.5rem 2rem;
+  background: #111827;
+  color: #fff;
+  text-align: center;
+}
+
+.label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #93c5fd;
+}
+
+.content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+}
+
+.selector-demo,
+.combinators,
+.nav-demo {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.nav-demo {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-demo a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-demo a:hover {
+  text-decoration: underline;
+}

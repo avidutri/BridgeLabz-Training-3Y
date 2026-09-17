@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7ff, #e9f3ff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f2937;
+}
+
+.page {
+  width: min(1100px, 90%);
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.label {
+  margin: 0;
+  color: #4f46e5;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+h1 {
+  margin: 0.5rem 0 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.demo-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.example-box {
+  flex: 1 1 220px;
+  background: #f8fafc;
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  padding: 1.25rem;
+  min-height: 220px;
+}
+
+.example-box h2 {
+  margin-top: 0;
+}
+
+.link-demo {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.link-demo a {
+  display: inline-block;
+  width: fit-content;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.link-demo a:hover,
+.link-demo a:focus {
+  color: #1d4ed8;
+  background: #dbeafe;
+  border-radius: 8px;
+  padding: 0.2rem 0.5rem;
+  outline: none;
+}
+
+.demo-button {
+  margin-top: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #10b981;
+  color: #fff;
+  padding: 0.9rem 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.demo-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.28);
+}
+
+.demo-button:focus {
+  outline: 3px solid rgba(16, 185, 129, 0.3);
+}
+
+.demo-button:active {
+  transform: scale(0.96);
+  background: #059669;
+}
+
+.demo-list {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.demo-list li {
+  padding: 0.35rem 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.demo-list li:nth-child(odd) {
+  background: #e0f2fe;
+  color: #075985;
+  border-radius: 6px;
+  padding-left: 0.45rem;
+}
+
+.demo-list li:nth-child(even) {
+  background: #ecfeff;
+  color: #0f766e;
+  border-radius: 6px;
+  padding-left: 0.45rem;
+}

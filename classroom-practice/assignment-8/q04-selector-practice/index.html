@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors Practice</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <p class="label">Assignment 8 / Q4</p>
+      <h1>Selector Practice</h1>
+    </header>
+
+    <main class="content">
+      <section class="intro">
+        <p>This page shows different selector types in action.</p>
+      </section>
+
+      <section class="selector-demo">
+        <p>This paragraph is styled by an element selector.</p>
+        <p class="highlight">This paragraph is styled using a class selector.</p>
+        <p id="special">This paragraph uses an ID selector.</p>
+        <p data-role="note">This paragraph uses an attribute selector.</p>
+      </section>
+
+      <section class="combinators">
+        <h2>Combinators</h2>
+        <div class="parent">
+          <p>Direct child paragraph.</p>
+          <span>Child element</span>
+        </div>
+
+        <h3>Heading</h3>
+        <p>Adjacent sibling paragraph.</p>
+        <p>Second sibling paragraph.</p>
+      </section>
+
+      <nav class="nav-demo">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>CSS selectors help us target HTML precisely and cleanly.</p>
+    </footer>
+  </body>
+</html>
