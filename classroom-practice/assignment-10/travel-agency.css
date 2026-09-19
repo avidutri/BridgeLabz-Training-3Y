@@ -1,0 +1,248 @@
+:root {
+  --primary-color: #ff7d5a;
+  --secondary-color: #103a4f;
+  --dark-color: #0f172a;
+  --light-color: #f5f7fb;
+  --muted-text: #5f6f7d;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --bs-body-font-family: "Poppins", "Segoe UI", sans-serif;
+  --bs-primary: var(--primary-color);
+}
+
+body {
+  background: var(--light-color);
+  color: var(--dark-color);
+  font-family: var(--bs-body-font-family);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  letter-spacing: 0.04em;
+}
+
+.navbar-brand span {
+  color: #ffd166;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff !important;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, rgba(16, 58, 79, 0.9), rgba(14, 31, 52, 0.8)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  padding: 8.5rem 0 5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.eyebrow,
+.section-tag {
+  color: #ffd166;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-section h1 {
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.lead {
+  max-width: 34rem;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 14px 28px rgba(255, 125, 90, 0.25);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #ef6849;
+  border-color: #ef6849;
+}
+
+.carousel {
+  border-radius: 1.5rem;
+  box-shadow: 0 1.5rem 2.5rem rgba(7, 23, 35, 0.25);
+}
+
+.carousel-item img {
+  height: 480px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background: linear-gradient(180deg, transparent, rgba(15, 23, 42, 0.72));
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.stats-section {
+  background: #ffffff;
+}
+
+.stat-card,
+.destination-card,
+.booking-card,
+.info-box {
+  background: var(--card-bg);
+  border: 1px solid rgba(16, 58, 79, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 0.75rem 1.5rem rgba(15, 23, 42, 0.05);
+}
+
+.stat-card {
+  padding: 2rem 1.25rem;
+}
+
+.stat-card h3 {
+  color: var(--secondary-color);
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.stat-card p {
+  margin-bottom: 0;
+  color: var(--muted-text);
+  font-weight: 600;
+}
+
+.destinations-section {
+  background: linear-gradient(180deg, #f5f7fb 0%, #edf6ff 100%);
+}
+
+.destination-card {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1.5rem 2rem rgba(16, 58, 79, 0.12);
+}
+
+.destination-card img {
+  height: 240px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.destination-card h4 {
+  margin-top: 0.5rem;
+}
+
+.booking-card {
+  background: linear-gradient(180deg, #ffffff 0%, #ecf9ff 100%);
+  border: none;
+}
+
+.progress {
+  height: 1.6rem;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.mini-stat {
+  background: rgba(255, 125, 90, 0.08);
+  border-radius: 1rem;
+  padding: 1rem 0.75rem;
+}
+
+.mini-stat strong {
+  display: block;
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+}
+
+.mini-stat span {
+  color: var(--muted-text);
+  font-size: 0.8rem;
+}
+
+.info-box {
+  padding: 1.5rem 1.25rem;
+  height: 100%;
+}
+
+.info-icon {
+  display: inline-flex;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9rem;
+  background: rgba(255, 125, 90, 0.12);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.info-box h5 {
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.info-box p {
+  margin-bottom: 0;
+  color: var(--muted-text);
+}
+
+.site-footer {
+  background: var(--dark-color);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 7rem;
+  }
+
+  .carousel-item img {
+    height: 380px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-section {
+    padding-bottom: 4rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .carousel-item img {
+    height: 300px;
+  }
+}

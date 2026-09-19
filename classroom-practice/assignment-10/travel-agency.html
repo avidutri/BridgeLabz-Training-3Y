@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voyage Vista | Travel Agency</title>
+
+    <!-- Google Font for a modern travel-brand look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="travel-agency.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3">
+        <div class="container">
+          <a class="navbar-brand fw-bold fs-3" href="#">Voyage<span>Vista</span></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+              <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+              <li class="nav-item"><a class="nav-link" href="#booking">Booking</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <p class="eyebrow">Curated escapes for every traveler</p>
+              <h1 class="display-4 fw-bold mb-3">Discover your next unforgettable journey.</h1>
+              <p class="lead text-white-50 mb-4">
+                Explore scenic coastlines, vibrant cities, and handpicked experiences designed to create memories that last a lifetime.
+              </p>
+
+              <!-- Bootstrap utilities for spacing and buttons -->
+              <div class="d-flex flex-wrap gap-3">
+                <a href="#booking" class="btn btn-primary btn-lg px-4 py-3">Plan My Trip</a>
+                <a href="#destinations" class="btn btn-outline-light btn-lg px-4 py-3">Explore More</a>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <!-- Bootstrap Carousel: interactive destination slideshow -->
+              <div id="travelCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Beach destination in Santorini" />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Santorini, Greece</h5>
+                      <p>Sunset cruises, whitewashed villages, and blue horizons.</p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="3500">
+                    <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Snowy mountain destination" />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Banff, Canada</h5>
+                      <p>Mountain adventures, alpine lakes, and cozy lodges.</p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="4000">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Lush valley destination" />
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Bali, Indonesia</h5>
+                      <p>Culture-rich temples, tropical landscapes, and island bliss.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#travelCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#travelCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section py-5">
+        <div class="container">
+          <div class="row g-4 text-center">
+            <div class="col-md-3 col-6">
+              <div class="stat-card h-100">
+                <h3>120+</h3>
+                <p>Destinations</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="stat-card h-100">
+                <h3>15K</h3>
+                <p>Happy Travelers</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="stat-card h-100">
+                <h3>4.9/5</h3>
+                <p>Average Rating</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="stat-card h-100">
+                <h3>24/7</h3>
+                <p>Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="destinations" class="destinations-section py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <p class="section-tag">Trending escapes</p>
+            <h2 class="fw-bold">Dream places to explore</h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="destination-card h-100">
+                <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80" class="img-fluid" alt="Paris city skyline" />
+                <div class="p-4">
+                  <span class="badge text-bg-light mb-2">Europe</span>
+                  <h4 class="fw-bold">Paris, France</h4>
+                  <p class="text-muted">Romantic getaways and boutique hotels.</p>
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="fw-bold text-primary">From $799</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">View Deal</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="destination-card h-100">
+                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80" class="img-fluid" alt="Dubai skyline" />
+                <div class="p-4">
+                  <span class="badge text-bg-light mb-2">Middle East</span>
+                  <h4 class="fw-bold">Dubai, UAE</h4>
+                  <p class="text-muted">Luxury stays and desert adventures.</p>
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="fw-bold text-primary">From $999</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">View Deal</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="destination-card h-100">
+                <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=900&q=80" class="img-fluid" alt="Kyoto lantern street" />
+                <div class="p-4">
+                  <span class="badge text-bg-light mb-2">Asia</span>
+                  <h4 class="fw-bold">Kyoto, Japan</h4>
+                  <p class="text-muted">Temple trails, scenic trains, and culture.</p>
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="fw-bold text-primary">From $899</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">View Deal</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="booking" class="booking-section py-5">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <div class="booking-card p-4 shadow-sm rounded-4 h-100">
+                <p class="section-tag">Booking progress</p>
+                <h3 class="fw-bold mb-3">Secure your dream trip.</h3>
+                <p class="text-muted mb-4">
+                  Your itinerary is 70% complete. Complete the final details and lock in your unforgettable escape today.
+                </p>
+
+                <!-- Bootstrap progress bar with striped and animated effect -->
+                <div class="progress" role="progressbar" aria-label="Booking progress" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width: 70%">70%</div>
+                </div>
+
+                <div class="row mt-4 g-3 text-center">
+                  <div class="col-4">
+                    <div class="mini-stat">
+                      <strong>5</strong>
+                      <span>Days</span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mini-stat">
+                      <strong>3</strong>
+                      <span>Stops</span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mini-stat">
+                      <strong>2</strong>
+                      <span>Guides</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <div class="info-box">
+                    <span class="info-icon">✈️</span>
+                    <h5>Flights</h5>
+                    <p>Flexible fares on top airlines around the world.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="info-box">
+                    <span class="info-icon">🏨</span>
+                    <h5>Hotels</h5>
+                    <p>Handpicked stays with premium reviews and perks.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="info-box">
+                    <span class="info-icon">🌍</span>
+                    <h5>Guided Tours</h5>
+                    <p>Local experiences curated by real travel experts.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="info-box">
+                    <span class="info-icon">💬</span>
+                    <h5>Travel Support</h5>
+                    <p>On-trip assistance from planning to return home.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer py-5">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-4">
+            <h4 class="fw-bold">VoyageVista</h4>
+            <p class="mb-0">Designing dream vacations with a personal touch.</p>
+          </div>
+          <div class="col-md-4 text-md-center">
+            <p class="mb-1"><strong>Phone:</strong> +1 (555) 786-1234</p>
+            <p class="mb-0"><strong>Email:</strong> hello@voyagevista.com</p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <p class="mb-1">123 Harbor Avenue</p>
+            <p class="mb-0">Miami, FL 33101</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
