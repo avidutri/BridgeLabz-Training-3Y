@@ -1,18 +1,23 @@
 
+// Store one month's expenses for the five required categories.
+const expenses = [
+    { category: "Food", amount: 3000 },
+    { category: "Travel", amount: 1000 },
+    { category: "Rent", amount: 5000 },
+    { category: "Bills", amount: 1500 },
+    { category: "Leisure", amount: 500 }
+];
 
-let expenses = [3000, 1000, 5000, 1500, 500];
-let total = 0;
+let totalExpenses = 0;
 
-for (let i=0; i<expenses.length;i++){
-    total+= expenses[i];
+for (const expense of expenses) {
+    totalExpenses += expense.amount;
 }
 
-let average = total/expenses.length;
-let tax =  total*10/100;
-let finalAmount = total;
-finalAmount += tax;
+const averageExpense = totalExpenses / expenses.length;
+let finalAmount = totalExpenses;
+finalAmount += totalExpenses * 0.10;
 
-console.log("Total Expenses: Rs. " + total.toFixed(2));
-console.log("Average Expenses: Rs. " + average.toFixed(2));
-console.log("Tax: Rs. " + tax.toFixed(2));
-console.log("Final Amount: Rs. " + finalAmount.toFixed(2));
+console.log(`Total expenses: Rs. ${totalExpenses.toFixed(2)}`);
+console.log(`Average expense: Rs. ${averageExpense.toFixed(2)}`);
+console.log(`Final amount after 10% tax: Rs. ${finalAmount.toFixed(2)}`);

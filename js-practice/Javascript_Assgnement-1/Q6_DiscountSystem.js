@@ -1,21 +1,19 @@
 
-
-
-let total = 6500;
+// Change this sample purchase total to test the discount tiers.
+const purchaseTotal = 6500;
 let discountPercentage = 0;
 
-if (total >= 10000) {
+if (purchaseTotal >= 10000) {
     discountPercentage = 25;
-} else if (total >= 5000) {
+} else if (purchaseTotal >= 5000) {
     discountPercentage = 15;
-} else if (total >= 2000) {
+} else if (purchaseTotal >= 2000) {
     discountPercentage = 5;
 }
 
-let discount = total * discountPercentage / 100;
-let finalPrice = Math.round(total - discount);
+const discountAmount = purchaseTotal * discountPercentage / 100;
+const finalPrice = Math.round(purchaseTotal - discountAmount);
 
-console.log("Original Total: Rs. " + total);
-console.log("Discount Percentage: " + discountPercentage + "%");
-console.log("Discount Amount: Rs. " + discount);
-console.log("Final Price: Rs. " + finalPrice);
+console.log(`Original total: Rs. ${purchaseTotal}`);
+console.log(`Discount percentage: ${discountPercentage}%`);
+console.log(`Final price: Rs. ${finalPrice}`);

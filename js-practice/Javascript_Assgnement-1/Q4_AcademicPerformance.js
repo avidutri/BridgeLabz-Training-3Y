@@ -1,28 +1,29 @@
 
+// Enter marks for five subjects, each scored out of 100.
+const subjectMarks = [85, 90, 78, 88, 80];
+let totalMarks = 0;
+let hasFailedSubject = false;
 
-let marks = [85, 90, 78, 88, 80];
-let total =0;
-let failed = false;
-
-for(let i=0;i<marks.length;i++){
-    total+=marks[i];
-
-    if(marks[i]<35){
-        failed=true;
+for (const marks of subjectMarks) {
+    totalMarks += marks;
+    if (marks < 35) {
+        hasFailedSubject = true;
     }
 }
 
-let average = total / marks.length;
-let percentage = (total/500)*100;
+const averageMarks = totalMarks / subjectMarks.length;
+const overallPercentage = (totalMarks / (subjectMarks.length * 100)) * 100;
 
-console.log("Total Marks: " + total);
-console.log("Average: " + average.toFixed(2));
-console.log("Percentage: " + percentage.toFixed(2) +"%");
+console.log(`Average marks: ${averageMarks.toFixed(2)}`);
+console.log(`Overall percentage: ${overallPercentage.toFixed(2)}%`);
 
-if(failed || percentage<50){
+// A failed subject overrides the overall percentage.
+if (hasFailedSubject || overallPercentage < 50) {
     console.log("Detained");
-}else if(percentage>=85){
-    console.log("Distinction");
-}else{
+} else if (overallPercentage >= 85) {
+    console.log("Promoted with Distinction");
+} else if (overallPercentage >= 50 && overallPercentage < 85) {
     console.log("Promoted");
+} else {
+    console.log("Detained");
 }

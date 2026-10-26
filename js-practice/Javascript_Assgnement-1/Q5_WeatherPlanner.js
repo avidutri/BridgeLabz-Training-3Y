@@ -1,15 +1,16 @@
 
+// Set sample weather conditions and combine rain/cold-wind checks.
+const temperature = 25;
+const isRaining = false;
+const windSpeed = 10;
+const shouldStayIndoors = isRaining || (temperature < 15 && windSpeed > 20);
 
-let temperature = 25;
-let isRaiining = false;
-let windspeed = 10;
-
-if(isRaining){
-    console.log("It's raining. Please carry an umbrella.");
-} else if(temperature > 35){
-    console.log("It's hot outside. Stay hydrated and wear light clothing.");
-} else if(temperature < 15 && windSpeed > 20){
-    console.log("It's cold and windy. Dress warmly and be cautious of strong winds.");
-} else{
-    console.log("The weather is moderate. Enjoy your day!");
+if (isRaining) {
+    console.log("Stay indoors with hot coffee.");
+} else if (temperature > 35) {
+    console.log("Go swimming.");
+} else if (shouldStayIndoors) {
+    console.log("Too cold and windy — stay home.");
+} else {
+    console.log("Perfect day for a walk.");
 }

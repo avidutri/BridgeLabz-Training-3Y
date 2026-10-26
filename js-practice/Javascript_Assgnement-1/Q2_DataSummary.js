@@ -1,18 +1,21 @@
+// Create sample values for each required JavaScript data type.
+const userName = "Binit";
+const age = 25;
+const isStudent = true;
+const subjects = ["Math", "Science", "English"];
+const student = { name: "Binit", age: 25 };
+const address = null;
+const optionalValue = undefined;
 
-let username = "Binit";
-let age = 25;
-let isstudent = true;
-let subjects = ["Math", "Science", "English"];
-let student ={name: "binit", age:25};
-let address = null;
-let result;
+// Array.isArray distinguishes arrays from ordinary objects; null needs a special check.
+const dataSummary = [
+    { Label: "String", Value: userName, Type: typeof userName },
+    { Label: "Number", Value: age, Type: typeof age },
+    { Label: "Boolean", Value: isStudent, Type: typeof isStudent },
+    { Label: "Array", Value: subjects, Type: Array.isArray(subjects) ? "array" : typeof subjects },
+    { Label: "Object", Value: student, Type: typeof student },
+    { Label: "Null", Value: address, Type: address === null ? "null" : typeof address },
+    { Label: "Undefined", Value: optionalValue, Type: typeof optionalValue }
+];
 
-console.table([
-    {Label: "Name",Value: username, Type: typeof username},
-    {Label: "Age", value: age, Type: typeof age},
-    {Label: "Student", Value: isstudent, Type: typeof isstudent},
-    {Label:"Subjects", Value: subjects, Type: Array.isArray(subjects) ? "array" : typeof subjects},
-    {Label: "Object", Value: student, Type: typeof student},
-    {Label: "Address", Value: address, Type: address === null ? "null" : typeof address},
-    {Label: "Result", Value: result, Type:typeof result}
-]);
+console.table(dataSummary);

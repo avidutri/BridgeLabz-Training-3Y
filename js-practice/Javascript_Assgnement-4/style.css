@@ -1,0 +1,142 @@
+:root {
+    color-scheme: light;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1e2926;
+    background: #f1f3ed;
+    font-synthesis: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+}
+
+.page-header {
+    margin-bottom: 28px;
+    padding: 24px 0;
+    border-bottom: 2px solid #b7c6bc;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #33705b;
+    font: 700 12px/1.4 Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 38px;
+}
+
+h2 {
+    margin-bottom: 16px;
+    font-size: 23px;
+}
+
+.page-header > p:last-child,
+.exercise > p {
+    margin-bottom: 0;
+    color: #53615b;
+    line-height: 1.55;
+}
+
+.exercise {
+    margin: 16px 0;
+    padding: 20px;
+    border: 1px solid #d1d8d1;
+    border-left: 4px solid #33705b;
+    background: #fff;
+}
+
+form {
+    display: grid;
+    gap: 14px;
+    max-width: 520px;
+}
+
+.field {
+    display: grid;
+    gap: 6px;
+}
+
+label {
+    font: 700 14px/1.4 Arial, sans-serif;
+}
+
+input,
+select,
+button {
+    min-height: 42px;
+    padding: 9px 11px;
+    border: 1px solid #aeb9b1;
+    border-radius: 4px;
+    font: 15px Arial, sans-serif;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #8bb5a1;
+    outline-offset: 1px;
+}
+
+button {
+    width: fit-content;
+    border-color: #245c49;
+    background: #245c49;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #194735;
+}
+
+.error-message {
+    min-height: 18px;
+    color: #b42318;
+    font: 13px/1.4 Arial, sans-serif;
+}
+
+.invalid {
+    border: 2px solid #c0392b;
+}
+
+.valid {
+    border: 2px solid #21824a;
+}
+
+.result {
+    margin: 14px 0 0;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+li {
+    margin: 8px 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 14px 40px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .exercise {
+        padding: 16px;
+    }
+}
