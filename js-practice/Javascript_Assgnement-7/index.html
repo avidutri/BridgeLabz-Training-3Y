@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment 7</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="Q1_ProductListManager.js"></script>
+    <script defer src="Q2_CharacterCounter.js"></script>
+    <script defer src="Q3_MultiStepForm.js"></script>
+    <script defer src="Q4_ThemeSwitcher.js"></script>
+    <script defer src="Q5_ImageGallery.js"></script>
+    <script defer src="Q6_StudentTableFilter.js"></script>
+    <script defer src="Q7_MousePathLogger.js"></script>
+    <script defer src="Q8_CustomDropdown.js"></script>
+    <script defer src="Q9_FormSubmitBlocker.js"></script>
+</head>
+<body class="theme-light" data-theme="light">
+    <header class="page-header">
+        <p class="eyebrow">JavaScript - ES6+ and the DOM</p>
+        <h1>Assignment 7</h1>
+        <p>Interactive browser exercises using HTML, CSS, and core JavaScript.</p>
+    </header>
+
+    <main>
+        <section class="exercise" aria-labelledby="q1-title">
+            <h2 id="q1-title">Q1 - Dynamic Product List Manager</h2>
+            <form id="product-form" class="inline-form">
+                <label class="sr-only" for="product-input">Product name</label>
+                <input id="product-input" type="text" placeholder="Enter a product" required>
+                <button type="submit">Add product</button>
+            </form>
+            <ul id="product-list" class="product-list">
+                <li class="product-item">
+                    <span class="product-name">Notebook</span>
+                    <button type="button" data-action="edit">Edit</button>
+                    <button type="button" data-action="delete" class="button-danger">Delete</button>
+                </li>
+                <li class="product-item">
+                    <span class="product-name">Pencil</span>
+                    <button type="button" data-action="edit">Edit</button>
+                    <button type="button" data-action="delete" class="button-danger">Delete</button>
+                </li>
+            </ul>
+        </section>
+
+        <section class="exercise" aria-labelledby="q2-title">
+            <h2 id="q2-title">Q2 - Live Character Counter</h2>
+            <label for="character-input">Message (maximum 100 characters)</label>
+            <textarea id="character-input" rows="4" placeholder="Write a short message..."></textarea>
+            <p id="character-counter" class="counter" aria-live="polite">100 characters remaining</p>
+            <button id="character-reset" type="button" class="button-secondary">Reset</button>
+        </section>
+
+        <section class="exercise" aria-labelledby="q3-title">
+            <h2 id="q3-title">Q3 - Multi-Step Form</h2>
+            <form id="multi-step-form" novalidate>
+                <fieldset class="form-step">
+                    <legend>Step 1 of 3 - Name</legend>
+                    <label for="step-name">Name</label>
+                    <input id="step-name" name="name" type="text" autocomplete="name" required>
+                    <p class="error-message" data-error-for="step-name" aria-live="polite"></p>
+                </fieldset>
+                <fieldset class="form-step" hidden>
+                    <legend>Step 2 of 3 - Email</legend>
+                    <label for="step-email">Email</label>
+                    <input id="step-email" name="email" type="email" autocomplete="email" required>
+                    <p class="error-message" data-error-for="step-email" aria-live="polite"></p>
+                </fieldset>
+                <fieldset class="form-step" hidden>
+                    <legend>Step 3 of 3 - Password</legend>
+                    <label for="step-password">Password</label>
+                    <input id="step-password" name="password" type="password" minlength="6" autocomplete="new-password" required>
+                    <p class="error-message" data-error-for="step-password" aria-live="polite"></p>
+                </fieldset>
+                <div class="button-row">
+                    <button id="step-back" type="button" class="button-secondary" hidden>Back</button>
+                    <button id="step-next" type="button">Next</button>
+                </div>
+            </form>
+            <div id="step-summary" class="result" aria-live="polite" hidden></div>
+        </section>
+
+        <section class="exercise theme-demo" aria-labelledby="q4-title">
+            <h2 id="q4-title">Q4 - Theme Switcher</h2>
+            <p>Choose a theme. The selection is applied to the page and stored in <code>data-theme</code>.</p>
+            <div class="button-row">
+                <button type="button" data-theme-choice="light">Light</button>
+                <button type="button" data-theme-choice="dark">Dark</button>
+                <button type="button" data-theme-choice="blue">Blue</button>
+            </div>
+            <p>Current theme: <strong id="current-theme">light</strong></p>
+        </section>
+
+        <section class="exercise" aria-labelledby="q5-title">
+            <h2 id="q5-title">Q5 - Image Gallery</h2>
+            <div id="image-gallery" class="image-gallery">
+                <button type="button" class="gallery-image" aria-label="Preview mountain landscape">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Sunlit mountain landscape">
+                </button>
+                <button type="button" class="gallery-image" aria-label="Preview lake landscape">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Mountain lake surrounded by trees">
+                </button>
+                <button type="button" class="gallery-image" aria-label="Preview forest landscape">
+                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Green valley and mountain lake">
+                </button>
+                <button type="button" class="gallery-image" aria-label="Preview meadow landscape">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Green meadow beneath a cloudy sky">
+                </button>
+                <button type="button" class="gallery-image" aria-label="Preview woodland landscape">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Sunlight through a forest">
+                </button>
+                <button type="button" class="gallery-image" aria-label="Preview snowy mountains">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Snow-covered mountain peaks">
+                </button>
+            </div>
+            <div id="image-modal" class="modal" hidden role="dialog" aria-modal="true" aria-label="Image preview">
+                <div class="modal-content">
+                    <button id="modal-close" type="button" class="modal-close" aria-label="Close image preview">&times;</button>
+                    <img id="modal-image" src="" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="exercise" aria-labelledby="q6-title">
+            <h2 id="q6-title">Q6 - Student Table Filter</h2>
+            <label for="student-search">Search students by name, branch, or CGPA</label>
+            <input id="student-search" type="search" placeholder="Type to filter...">
+            <div class="table-wrap">
+                <table id="student-table">
+                    <thead>
+                        <tr><th>Name</th><th>Branch</th><th>CGPA</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Aarav Shah</td><td>Computer Science</td><td>8.7</td></tr>
+                        <tr><td>Diya Patel</td><td>Electronics</td><td>9.1</td></tr>
+                        <tr><td>Kabir Mehta</td><td>Mechanical</td><td>7.8</td></tr>
+                        <tr><td>Mira Rao</td><td>Computer Science</td><td>9.4</td></tr>
+                        <tr><td>Rohan Das</td><td>Civil</td><td>8.2</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p id="no-students" class="empty-message" aria-live="polite" hidden>No results found</p>
+        </section>
+
+        <section class="exercise" aria-labelledby="q7-title">
+            <h2 id="q7-title">Q7 - Mouse Path and Coordinates</h2>
+            <p>Move the pointer inside the box. Double-click to place a red dot.</p>
+            <div id="mouse-box" class="mouse-box" aria-label="Mouse tracking area"></div>
+            <p id="mouse-coordinates" aria-live="polite">clientX: -, clientY: -</p>
+        </section>
+
+        <section class="exercise" aria-labelledby="q8-title">
+            <h2 id="q8-title">Q8 - Custom Dropdown</h2>
+            <div id="custom-dropdown" class="custom-dropdown">
+                <button id="dropdown-toggle" type="button" aria-expanded="false" aria-controls="dropdown-options">Choose a subject</button>
+                <ul id="dropdown-options" class="dropdown-options" hidden>
+                    <li><button type="button" data-option="JavaScript">JavaScript</button></li>
+                    <li><button type="button" data-option="HTML">HTML</button></li>
+                    <li><button type="button" data-option="CSS">CSS</button></li>
+                    <li><button type="button" data-option="Accessibility">Accessibility</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exercise" aria-labelledby="q9-title">
+            <h2 id="q9-title">Q9 - Form Submit Blocker</h2>
+            <form id="validation-form" novalidate>
+                <div class="field">
+                    <label for="validation-name">Name</label>
+                    <input id="validation-name" name="name" type="text" autocomplete="name" required>
+                    <p class="error-message" data-validation-error="validation-name" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                    <label for="validation-email">Email</label>
+                    <input id="validation-email" name="email" type="text" inputmode="email" autocomplete="email" required>
+                    <p class="error-message" data-validation-error="validation-email" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                    <label for="validation-password">Password</label>
+                    <input id="validation-password" name="password" type="password" autocomplete="new-password" required>
+                    <p class="error-message" data-validation-error="validation-password" aria-live="polite"></p>
+                </div>
+                <button type="submit">Submit form</button>
+            </form>
+            <p id="form-success" class="success-message" aria-live="polite" hidden>Form Submitted Successfully</p>
+        </section>
+    </main>
+</body>
+</html>
